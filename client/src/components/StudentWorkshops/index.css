@@ -1,0 +1,40 @@
+.header{
+    background-color: #318CE7;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2%;
+    align-items: center;
+    padding: 1%;
+    height:80px;
+    width:100vw;
+}
+sub-container{
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+}
+.workshop-heading{
+    color: white;
+    font-weight: bold;
+}
+
+.logout-button{
+    background-color: white;
+    color:#318CE7;
+    font-weight: bold;
+}
+.worshops-container{
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+.admin-main-container{
+    overflow-x: hidden;
+}
+.loading-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

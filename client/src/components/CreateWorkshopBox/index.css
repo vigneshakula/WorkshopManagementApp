@@ -1,0 +1,26 @@
+.create-workshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    height: 200px;
+    border-radius: 30px;
+    padding: 3.5%;
+    color:#318CE7;
+    width:400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.create-heading{
+
+    color:  #318CE7;
+    font-weight: bold;
+}
+
+.add-icon{
+    height: 60px;
+    width: 60px;
+}

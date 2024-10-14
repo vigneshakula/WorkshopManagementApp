@@ -1,0 +1,21 @@
+.head{
+    color:#318CE7;
+    font-weight: bold;
+}
+.details-date{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: bold;
+    color: #475569;
+}
+.details-container{
+    padding: 10px;
+}
+.register-button{
+    background-color: #318CE7;
+    color: white;
+}
+.feedback-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

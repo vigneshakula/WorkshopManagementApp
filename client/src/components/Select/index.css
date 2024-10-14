@@ -1,0 +1,34 @@
+.select-main-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#318CE7;
+}
+.select-container{
+    background-color: #FCF6F5FF;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    border-radius: 20px;
+    width:50%;
+}
+.select-heading{
+    color:  #318CE7;
+    font-weight: bold;
+}
+
+.select-buttons-container{
+    display: flex;
+    width:50%;
+    height: 40px;
+    justify-content: space-around;
+}
+.select-button{
+    color:#FCF6F5FF;
+    background-color: #318CE7;
+    border-width: 0;
+}
