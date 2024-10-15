@@ -139,6 +139,8 @@ def registerWorshop() :
     username =get_jwt_identity().get('username')
     result = db.workshops.find_one({"workshop_id":data["workshopId"]})
     students = result["students"]
+    if username in students :
+        return jsonify({"msg":"already registered"})
     students.append(username)
     db.workshops.update_many({"workshop_id":data["workshopId"]},{"$set" : {"students":students}})
     student =db.student.find_one({"username":username})
