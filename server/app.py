@@ -40,7 +40,6 @@ def studentLogin():
     data = request.get_json()
     username = data.get("username")
     password = data.get("password")
-    username = data["username"]
     user = db.student.find_one({"username":username})
     if user :
         if user["password"]==password:
@@ -270,7 +269,8 @@ def addStudent() :
         return jsonify({"msg" : "Username is already taken"}),400
     db.student.insert_one({
         "username":username,
-        "password":password
+        "password":password,
+        "workshops_registered" :[]
     })
     return jsonify({"msg":"Succesfully added"}),200
 
