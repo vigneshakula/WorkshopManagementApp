@@ -9,6 +9,7 @@ const WorkshopForm = () => {
     const navigate = useNavigate()
     const [workshopName,updateWorkshopName] = useState("")
     const [date,updateDate] = useState(moment().format('YYYY-MM-DD'))
+    const [errormsg,updateErrormsg] = useState("")
 
     const onupdateWorkshopName=(event) =>{
             updateWorkshopName(event.target.value)
@@ -43,7 +44,12 @@ const WorkshopForm = () => {
 
       const onSubmitForm = (event) => {
         event.preventDefault()
+        if (workshopName===""){
+            updateErrormsg("Enter Workshop Name")
+        }
+    else{
         makeapicall()
+    }
       }
 
 
@@ -54,7 +60,7 @@ const WorkshopForm = () => {
 
     return  <div>
         <div className='header'>
-            <h1 className='workshop-heading'>Workshops</h1>
+            <h1 className='workshop-heading'>Workshop App</h1>
         </div>
         <div className='create-sub-container'>
             <div className="form-container">
@@ -67,6 +73,7 @@ const WorkshopForm = () => {
                                 <input id="date" type="date" onChange={onChangeDate} /> 
                                 <div className="login-button-container"><button type="submit" className="btn btn-primary select-button">submit</button></div>
                             </form>
+                            <p className='errormsg'>{errormsg}</p>  
                 </div>
             </div>
             </div>

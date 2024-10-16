@@ -65,8 +65,11 @@ h5{
 }
 .feedback-description{
     font-weight: 500;
-    margin-left: 14px;
+    display: inline;
+    margin-left: 10px;
+    color: #000000;
 }
 .fed{
     margin-left: 13px;
+    display: inline;
 }

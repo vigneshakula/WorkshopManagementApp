@@ -91,7 +91,7 @@ const AdminWorkShopDetails = () => {
                    <div className="fed">
                        <h5>Rating : {i.rating}</h5>
                        <br/>
-                       <h5>feedback :</h5><p className="feedback-description">{i.feedback}</p>
+                       <h5 style={{marginLeft:"27px"}}>Feedback :</h5><p className="feedback-description">{i.feedback}</p>
                    </div>
            </li>)
                    } 

@@ -8,6 +8,11 @@
     height:80px;
     width:100vw;
 }
+.workshops-heading{
+    color:#318CE7;
+    margin-left:15px;
+    margin-top: 15px;
+}
 sub-container{
     display: flex;
     padding: 2%;

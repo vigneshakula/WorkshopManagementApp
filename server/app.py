@@ -157,6 +157,8 @@ def registerWorshop() :
         "msg" : "added"
     }),200
 
+
+
 @app.post("/studentworkshopdetails")
 @jwt_required()
 def getStudentsWorkshopDetails() :
@@ -230,6 +232,48 @@ def postFeedback() :
     return jsonify({
         "msg":"feedback added"
     }),200
+
+
+
+@app.post("/addnewadmin")
+@jwt_required()
+def addAdmin() :
+    if not request.is_json:
+        return jsonify({"msg": "Missing JSON in request"}), 400
+    data = request.get_json()
+    if data.get("role")=="student" :
+        return jsonify({"msg":"you dont have access to this api"}),400
+    username=data.get("username")
+    password= data.get("password")
+    admin = db.admin.find_one({"username":username})
+    if admin :
+        return jsonify({"msg" : "Username is already taken"}),400
+    db.admin.insert_one({
+        "username":username,
+        "password":password
+    })
+    return jsonify({"msg":"Succesfully added"}),200
+
+
+@app.post("/addnewstudent")
+@jwt_required()
+def addStudent() :
+    if not request.is_json:
+        return jsonify({"msg": "Missing JSON in request"}), 400
+    data = request.get_json()
+    if data.get("role")=="student" :
+        return jsonify({"msg":"you dont have access to this api"}),400
+    username=data.get("username")
+    password= data.get("password")
+    admin = db.student.find_one({"username":username})
+    if admin :
+        return jsonify({"msg" : "Username is already taken"}),400
+    db.student.insert_one({
+        "username":username,
+        "password":password
+    })
+    return jsonify({"msg":"Succesfully added"}),200
+
 
 
 if __name__ == "__main__" :

@@ -62,11 +62,12 @@ const StudentWorkshops = () => {
 
     return <div className='admin-main-container'>
         <div className='header'>
-            <h1 className='workshop-heading'>Workshops</h1>
+            <h1 className='workshop-heading'>Workshop App</h1>
             <div>
                 <button type="button" className='btn logout-button' onClick={onLogout}>Logout</button>
             </div>
         </div>
+        <h1 className='workshops-heading'>Current Workshops :-</h1>
         <ul className='worshops-container'>
                 {workshops.map(i=> <Workshop name={i.name} date={i.date} workshopId={i.workshop_id} key={i.workshopId} />)}
         </ul>

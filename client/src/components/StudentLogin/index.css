@@ -52,3 +52,6 @@ input{
     justify-content: center;
     margin-top: 20px;
 }
+.errormsg{
+    color: red;
+}

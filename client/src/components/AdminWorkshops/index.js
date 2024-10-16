@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { Oval } from 'react-loader-spinner'
 import AdminWorkshop from '../AdminWorkshop'
 import CreateWorkshop from '../CreateWorkshopBox'
+import AddAdminBox from '../AddAdminBox'
+import AddStudentBox from '../AddStudentBox'
 import './index.css'
 
 const AdminWorkshops = () => {
@@ -61,14 +63,17 @@ const AdminWorkshops = () => {
 
     return <div className='admin-main-container'>
         <div className='header'>
-            <h1 className='workshop-heading'>Workshops</h1>
+            <h1 className='workshop-heading'>Workshop App</h1>
             <div>
                 <button type="button" className='btn logout-button' onClick={onLogout}>Logout</button>
             </div>
         </div>
-        <div className='cons'> 
+        <div className='cons main-cons'> 
             <CreateWorkshop />
+            <AddAdminBox />
+            <AddStudentBox />
         </div>
+        <h1 className='workshops-heading'>Current Workshops :-</h1>
         <ul className='worshops-container cons'>
                 {workshops.map(i=> <AdminWorkshop name={i.name} date={i.date} workshopId={i.workshop_id} key={i.workshopId} />)}
         </ul>

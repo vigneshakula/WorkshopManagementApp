@@ -1,4 +1,6 @@
-
+.errormsg{
+    color: red;
+}
 .header{
     background-color: #318CE7;
     display: flex;
@@ -29,7 +31,4 @@
 }
 .workshop-label{
     margin-top: 20px;
-}
-.errormsg{
-    color: red;
 }

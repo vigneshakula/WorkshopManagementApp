@@ -7,6 +7,8 @@ import AdminLogin from './components/AdminLogin'
 import StudentWorkshopDetails from './components/StudentWorkshopDetails'
 import AdminWorkShopDetails from './components/AdminWorskshopDetails'
 import WorkshopForm from './components/WorkshopForm'
+import AdminForm from './components/AdminForm'
+import StudentForm from './components/StudentForm'
 import NotFound from './components/NotFound'
 
 import './App.css';
@@ -21,6 +23,8 @@ const App= () => {
     <Route exact path="/workshops/:id" Component={StudentWorkshopDetails} />
     <Route exact path="/adminworkshops/:id" Component={AdminWorkShopDetails} />
     <Route exact path='/createworkshop' Component={WorkshopForm} />
+    <Route exact path="/addadmin" Component={AdminForm} />
+    <Route exact path="/addstudent" Component={StudentForm} />
     <Route path="*" Component={NotFound} />
   </Routes>
 }

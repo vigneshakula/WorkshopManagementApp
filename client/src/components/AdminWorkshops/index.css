@@ -1,6 +1,11 @@
 .admin-main-container{
     overflow-x: hidden;
 }
+.workshops-heading{
+    color:#318CE7;
+    margin-left:15px;
+    margin-top: 15px;
+}
 
 .header{
     background-color:#318CE7;
@@ -31,4 +36,10 @@
 .cons{
     margin-top: 30px;
     margin-left: 20px;
+}
+
+.main-cons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
